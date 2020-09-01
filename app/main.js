@@ -1,7 +1,9 @@
-import CarsController from "./Controllers/CarsController.js";
+import CarsController from "./Controllers/CarsController.js"
+import JobsController from "./Controllers/JobsController.js"
 
 class App {
-  carsController = new CarsController();
+  carsController = new CarsController()
+  jobsController = new JobsController()
 }
 
-window["app"] = new App();
+window["app"] = new App()
