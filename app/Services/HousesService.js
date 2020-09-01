@@ -3,7 +3,10 @@ import House from "../Models/House.js"
 import { api } from "./AxiosService.js"
 
 class HousesService {
-  constructor() { }
+  async getHouses() {
+    let result = await api.get('houses')
+    ProxyState.houses = result.data.data.map(h => new House(h))
+  }
 }
 
 
