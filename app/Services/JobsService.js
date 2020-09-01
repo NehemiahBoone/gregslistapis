@@ -6,6 +6,19 @@ class JobsService {
   constructor() {
     console.log("service");
   }
+
+  async getJobs() {
+    let result = await api.get('jobs')
+    ProxyState.jobs = result.data.data.map(j => new Job(j))
+  }
+
+  async createJob(rawJob) {
+
+  }
+
+  async removeJob() {
+
+  }
 }
 
 
