@@ -13,7 +13,9 @@ class JobsService {
   }
 
   async createJob(rawJob) {
-
+    let result = await api.post('jobs', rawJob)
+    let job = new Job(result.data.data)
+    ProxyState.jobs = [...ProxyState.jobs, job]
   }
 
   async removeJob() {
