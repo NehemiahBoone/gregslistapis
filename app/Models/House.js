@@ -1,5 +1,5 @@
 export default class House {
-  constructor({ _id, imgUrl, bedrooms, year, price, description, levels }) {
+  constructor({ _id, imgUrl, bedrooms, year, price, description, levels, bathrooms }) {
     this.id = _id
     this.imgUrl = imgUrl
     this.bedrooms = bedrooms
@@ -7,6 +7,7 @@ export default class House {
     this.price = price
     this.description = description || 'No description'
     this.levels = levels
+    this.bathrooms = bathrooms
   }
 
   get Template() {
@@ -15,7 +16,7 @@ export default class House {
       <div class="card">
           <img class="card-img-top" src="${this.imgUrl}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.bedrooms} - ${this.year} - ${this.levels}</h4>
+              <h4 class="card-title">${this.bedrooms} - ${this.year} - ${this.levels} - ${this.bathrooms}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
                   <button class="btn btn-outline-danger" onclick="app.carsController.removeHouse('${this.id}')">Delete</button>
