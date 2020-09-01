@@ -13,6 +13,11 @@ class HousesService {
     let house = new House(result.data.data)
     ProxyState.houses = [...ProxyState.houses, house]
   }
+
+  async removeHouse(id) {
+    await api.delete(`houses/${id}`)
+    ProxyState.houses = ProxyState.houses.filter(h => h.id != id)
+  }
 }
 
 

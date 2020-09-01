@@ -19,7 +19,7 @@ export default class House {
               <h4 class="card-title">${this.bedrooms} - ${this.year} - ${this.levels} - ${this.bathrooms}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
-                  <button class="btn btn-outline-danger" onclick="app.carsController.removeHouse('${this.id}')">Delete</button>
+                  <button class="btn btn-outline-danger" onclick="app.housesController.removeHouse('${this.id}')">Delete</button>
                   <p>$${this.price.toFixed(2)}</p>
               </div>
           </div>

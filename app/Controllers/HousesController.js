@@ -48,4 +48,12 @@ export default class HousesController {
       console.error(error)
     }
   }
+
+  removeHouse(id) {
+    try {
+      housesService.removeHouse(id)
+    } catch (error) {
+      console.error(error)
+    }
+  }
 }
