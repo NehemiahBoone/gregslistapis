@@ -1,5 +1,5 @@
-import { ProxyState } from "../AppState.js";
-import carsService from "../Services/CarsService.js";
+import { ProxyState } from "../AppState.js"
+import carsService from "../Services/CarsService.js"
 
 // private
 function _drawCars() {
