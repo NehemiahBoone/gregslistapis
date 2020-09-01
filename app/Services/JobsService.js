@@ -18,8 +18,9 @@ class JobsService {
     ProxyState.jobs = [...ProxyState.jobs, job]
   }
 
-  async removeJob() {
-
+  async removeJob(id) {
+    await api.delete(`jobs/${id}`)
+    ProxyState.jobs = ProxyState.jobs.filter(j => j.id != id)
   }
 }
 

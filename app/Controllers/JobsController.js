@@ -44,9 +44,9 @@ export default class JobsController {
     }
   }
 
-  removeJob() {
+  removeJob(id) {
     try {
-      jobsService.removeJob()
+      jobsService.removeJob(id)
     } catch (error) {
       console.error(error)
     }
